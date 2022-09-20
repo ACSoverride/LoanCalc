@@ -3,4 +3,4 @@ project(LoanCalc)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(LoanCalc main.cpp)
+add_executable(LoanCalc lab3LC.cpp)
