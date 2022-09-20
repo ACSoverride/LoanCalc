@@ -1,5 +1,6 @@
 #include <iostream>
 #include <cmath>
+#include <iomanip>
 using namespace std;
 //Author: Matthew Shapiro
 //Class : CSI 140-01
@@ -36,11 +37,11 @@ int main() {
     double trueRate = rate/100;
     double monthlyPayment = borrow*pow(1+trueRate, months)*trueRate/(pow(1+trueRate, months)-1);
     //outputting everything
-    cout << "\nLoan Amount: " << borrow;
-    cout << "\nMonthly Interest Rate: " << rate << "%";
+    cout << "\nLoan Amount: " << fixed << setprecision(2) << borrow;
+    cout << "\nMonthly Interest Rate: " << fixed << setprecision(2) << rate << "%";
     cout << "\nNumber of Payments: " << months;
-    cout << "\nMonthly Payment: " << monthlyPayment;
-    cout << "\nTotal Amount paid back: " << borrow*pow(1+trueRate, months);
-    cout << "\nInterest Paid " << borrow*pow(1+trueRate, months)-borrow;
+    cout << "\nMonthly Payment: " << fixed << setprecision(2) << monthlyPayment;
+    cout << "\nTotal Amount paid back: " << fixed << setprecision(2) << borrow*pow(1+trueRate, months);
+    cout << "\nInterest Paid " << fixed << setprecision(2) <<borrow*pow(1+trueRate, months)-borrow;
 
 }
